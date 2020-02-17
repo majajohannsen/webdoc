@@ -1,15 +1,41 @@
-< !DOCTYPE html>
-    < html lang="">
-        < head>
-            < meta charset="utf-8">
-                < meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    < link rel "stylesheet" href="style.css">
-                        < title>
-                            < /title>
-                                < /head>
+<!DOCTYPE html>
+<html lang="">
 
-                                    < body>
-                                        <script src="voresscript.js"></script>
-                                        < /body>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>
+    </title>
+</head>
 
-                                            < /html>
+<body id="forside">
+    <header>
+        <nav>
+            <div id="logo-burger">
+                <a href="index.html"><img src="images/colorama.png" alt="logo"></a>
+                <label for="toggle">&#9776;</label>
+            </div>
+            <!--dette er en checkbox som gør det muligt at folde burgermenuen ud, og den skal ligge udenfor de to divs-->
+            <input type="checkbox" id="toggle" class="hidden">
+
+            <div id="main-nav">
+                <div class="dropdown">
+                    <a href="produkter.html">Maling
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="...">Indendørs maling</a>
+                        <a href="...">Udendørs maling</a>
+                        <a href="...">Maler udstyr</a>
+                    </div>
+                </div>
+                <a href="...">Om Colorama</a>
+                <a href="...">Kontakt os</a>
+            </div>
+        </nav>
+
+    </header>
+    <script src="voresscript.js"></script>
+</body>
+
+</html>

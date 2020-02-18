@@ -1,174 +1,322 @@
 /*GENERELLE REGLER*/
-
-/*Dette fjerner browsernes padding og margin fra selve body og ikke fra f.eks. lister og overskrifter, hvor vi ofte gerne vil beholde det*/
-body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Baskervville', serif;
-    background-color: #fff;
-}
-
-/*Box-sizing skal gælde for alle elementer, hvorfor den sættes på * og ikke bare body */
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/*Da vi bruger flexbox er det en god idé altid at sætte billeder til 100% width og så tilpasse den container rundt om billedet efterfølgende*/
-img {
-    width: 100%;
-}
 
-header {
-    background: #fff;
-    width: 100%;
-    padding: 10px;
-}
-
-/*NAVIGATION - responsiv med flexbox*/
-#logo-burger {
-    display: flex;
-    align-items: center;
-}
-
-#logo-burger a {
-    margin-bottom: 5px;
-    width: 100px;
-}
-
-#main-nav {
-    display: flex;
-    margin-right: auto;
-    list-style: none;
-
-}
-
-#main-nav a {
-    color: black;
-    text-decoration: none;
-    display: block;
-    font-size: 1.5em;
-
-}
-
-#main-nav a:hover {
-    color: dodgerblue;
-}
-
-
-/*Denne skjuler burgermenuens checkbox som aktiverer toggle funktionen*/
-.hidden {
-    display: none;
-}
-
-/*MEDIA QUERY MOBILE */
-
-@media all and (max-width: 599px) {
-
-    /*HEADER NAV*/
-    header {
-        display: block;
-    }
-
-    #logo-burger {
-        justify-content: space-between;
-        align-items: center;
-
-    }
-
-    /*label er selve burgerikonet*/
-    #logo-burger label {
-        display: block;
-        font-size: 2em;
-        cursor: pointer;
-
-        /*laver en hånd i stedet for en pil, når man kører hen over burgermenuen*/
-    }
-
-    /*Dette gør at burgermenuen folder sig ud, når man klikker på den - eller rettere sagt den checkboks som er skjult bag den*/
-    #toggle:checked + #main-nav {
-        display: block;
-    }
-
-    /*Den primære navigation skjules på den lille skærm*/
-    #main-nav {
-        display: none;
-
-    }
-
-    #main-nav a {
-        text-align: center;
-        margin: 3px;
-
-    }
-}
-
-/*MEDIA QUERY TABLET AND ABOVE*/
-
-/*HEADER NAV*/
-nav {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-}
-
-#main-nav {
-    justify-content: space-evenly;
-    min-width: 50%;
-    margin: 0;
-}
-
-#main-nav a {
-    margin: 0 .5em;
-}
-
-.hidden {
-    display: none;
-}
-
-/*Dette fjerner burgermenu ikonet*/
-label {
-    display: none;
-}
-
-/*Dropdown*/
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #fff;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
     z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #4f7942;
+    overflow-x: hidden;
+    padding-top: 300px;
 }
 
-.dropdown-content a {
-    padding: 12px 16px;
+.sidenav a {
+    padding: 6px 8px 6px 16px;
     text-decoration: none;
+    font-size: 25px;
+    color: #fff;
     display: block;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.sidenav a:hover {
+    color: green;
 }
+
+h4 {
+    color: #fff;
+    font-family: sans-serif;
+}
+
+html {
+    font-size: 10px;
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    color: #333;
+    text-align: center;
+    letter-spacing: 1em;
+    text-transform: uppercase;
+}
+
+.container .title {
+    padding: 6em;
+}
+
+.container h1 {
+    font-size: 4.5em;
+}
+
+.container h2 {
+    font-size: 7em;
+    color: #fff;
+    z-index: 10;
+    opacity: 0.8;
+}
+
+.container h3 {
+    font-size: 1.4em;
+    line-height: 0;
+    padding: 1em 0;
 }
 
 
-/*MEDIA QUERY LAPTOP AND ABOVE*/
+.between {
+    height: 60em;
+    position: relative;
 
-@media all and (min-width: 1024px) {
+}
 
-    /*NAVIGATION*/
-    nav {
-        flex-direction: row;
+.bg {
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 2em 0;
+
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.container .pa {
+    background-image: url("./images/paris.jpg");
+}
+
+.container .ist {
+    background-image: url("./images/istanbul.jpg");
+}
+
+.container .fir {
+    background-image: url("./images/firenze.jpg");
+}
+
+.container .parallax {
+    width: 100%;
+    padding: 25em 0;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.video {
+    width: 100%;
+}
+
+
+.pilned {
+    width: 10%;
+    position: relative;
+    top: 200px;
+    -webkit-animation: bounce-top 2s infinite alternate both;
+    animation: bounce-top 2s infinite alternate both;
+}
+
+
+.pilop {
+    width: 10%;
+    position: relative;
+    bottom: 200px;
+    -webkit-animation: bounce-top 2s infinite alternate both;
+    animation: bounce-top 2s infinite alternate both;
+
+}
+
+@-webkit-keyframes bounce-top {
+    0% {
+        -webkit-transform: translateY(-45px);
+        transform: translateY(-45px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 1;
     }
 
-    /*Dette skubber menuen ud til højre ved at bruge al margin til højre for logoet*/
-    #logo-burger {
-        margin-right: auto;
+    24% {
+        opacity: 1;
     }
+
+    40% {
+        -webkit-transform: translateY(-24px);
+        transform: translateY(-24px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    65% {
+        -webkit-transform: translateY(-12px);
+        transform: translateY(-12px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    82% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    93% {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    25%,
+    55%,
+    75%,
+    87% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+}
+
+@keyframes bounce-top {
+    0% {
+        -webkit-transform: translateY(-45px);
+        transform: translateY(-45px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+
+    24% {
+        opacity: 1;
+    }
+
+    40% {
+        -webkit-transform: translateY(-24px);
+        transform: translateY(-24px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    65% {
+        -webkit-transform: translateY(-12px);
+        transform: translateY(-12px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    82% {
+        -webkit-transform: translateY(-6px);
+        transform: translateY(-6px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    93% {
+        -webkit-transform: translateY(-4px);
+        transform: translateY(-4px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+
+    25%,
+    55%,
+    75%,
+    87% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+}
+
+.roll-in-right {
+    -webkit-animation: roll-in-right 1s ease-out alternate both;
+    animation: roll-in-right 1s ease-out alternate both;
+}
+
+@-webkit-keyframes roll-in-right {
+    0% {
+        -webkit-transform: translateX(800px) rotate(540deg);
+        transform: translateX(800px) rotate(540deg);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0) rotate(0deg);
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes roll-in-right {
+    0% {
+        -webkit-transform: translateX(800px) rotate(540deg);
+        transform: translateX(800px) rotate(540deg);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0) rotate(0deg);
+        transform: translateX(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+.modal_dialog {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal_indhold {
+    position: absolute;
+    border: 1px solid #888;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
 }

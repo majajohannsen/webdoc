@@ -10,7 +10,6 @@ function erSynlig(elementId) {
     } else {
         return false;
     }
-
 }
 
 function aktiverTekstAnimation() {
@@ -18,16 +17,13 @@ function aktiverTekstAnimation() {
         if (erSynlig(tekstIdListe[i])) {
             document.getElementById(tekstIdListe[i]).classList.add("roll-in-right");
         } else {
-            document.getElementById(tekstIdListe[i]).classList.remove("roll-in-right");
+            document.getElementById(tekstIdListe[i]).classList.remove("roll-in-right")
         }
     }
 }
 
-const tekstIdListe = ["tekst1", "tekst2", "tekst3", "tekst4"];
-
-
-
 function aktiverMultimedier() {
+
     for (let i = 0; i <= AVIdListe.length - 1; i++) {
         if (erSynlig(AVIdListe[i])) {
             AVIndholdsliste[i].loop = true;
@@ -39,15 +35,28 @@ function aktiverMultimedier() {
     }
 }
 
-const AVIdListe = ["spray", "taepper", "farver", "video"];
+<<
+<<
+<< < HEAD
+const AVIdListe = ["spray", "taepper", "farver", "video"]; ===
+===
+=
+//Hovedeprogrammet
+
+const tekstIdListe = ["tekst1", "tekst2", "tekst3", "tekst4"];
+
+window.addEventListener("scroll", function () {
+    aktiverTekstAnimation();
+    aktiverMultimedier();
+});
+
+const AVIdListe = ["spray", "taepper", "farver", "video"]; >>>
+>>>
+>
+webdoc / master
 const AVIndholdsliste = [];
 
 AVIndholdsliste[0] = new Audio("Bouncy_Fun_1.mp3");
 AVIndholdsliste[1] = new Audio("Walker.mp3");
 AVIndholdsliste[2] = new Audio("Funky_Groove.mp3");
 AVIndholdsliste[3] = document.getElementById("video");
-
-window.addEventListener("scroll", function () {
-    aktiverTekstAnimation();
-    aktiverMultimedier();
-});

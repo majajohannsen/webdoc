@@ -39,7 +39,7 @@ function aktiverMultimedier() {
     }
 }
 
-const AVIdListe = ["paris", "istanbul", "firenze", "video"];
+const AVIdListe = ["spray", "taepper", "farver", "video"];
 const AVIndholdsliste = [];
 
 AVIndholdsliste[0] = new Audio("Bouncy_Fun_1.mp3");

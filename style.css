@@ -20,7 +20,7 @@ html {
     z-index: 1;
     top: 0;
     opacity: 70%;
-    background-color: dodgerblue;
+    background-color: seagreen;
     overflow-x: hidden;
     padding-top: 20%;
 }
@@ -379,7 +379,6 @@ html {
 .container {
     width: 100%;
     margin: 0 auto;
-    color: #333;
     text-align: center;
     letter-spacing: 0.8em;
     text-transform: uppercase;
@@ -419,9 +418,10 @@ html {
 
 }
 
-.bg {
+.box {
     width: 100%;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: seagreen;
+    opacity: 70%;
     padding: 2em 0;
 
 }

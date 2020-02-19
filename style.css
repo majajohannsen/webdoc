@@ -398,11 +398,14 @@ html {
     font-size: xx-large;
 }
 
-.container h2 {
-    font-size: 7em;
-    color: #fff;
+.container {
     z-index: 10;
     opacity: 0.8;
+}
+
+h2 {
+    font-size: 7em;
+    color: #fff;
 }
 
 .container h3 {
@@ -420,8 +423,7 @@ html {
 
 .box {
     width: 100%;
-    background-color: seagreen;
-    opacity: 70%;
+    background-color: rgba(46, 139, 87, 0.8);
     padding: 2em 0;
 
 }

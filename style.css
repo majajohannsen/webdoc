@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-
 .sidenav {
     height: 100%;
     width: 160px;
@@ -13,9 +12,10 @@
     z-index: 1;
     top: 0;
     right: 0;
+    opacity: 65%;
     background-color: #4f7942;
     overflow-x: hidden;
-    padding-top: 300px;
+    padding-top: 193px;
 }
 
 .sidenav a {
@@ -24,15 +24,20 @@
     font-size: 25px;
     color: #fff;
     display: block;
+
 }
 
 .sidenav a:hover {
-    color: green;
+    color: grey;
 }
 
 h4 {
     color: #fff;
     font-family: sans-serif;
+}
+
+h4 : hover {
+    color: grey;
 }
 
 html {
@@ -46,9 +51,9 @@ html {
 .container {
     width: 100%;
     margin: 0 auto;
-    color: #333;
+    color: black;
     text-align: center;
-    letter-spacing: 1em;
+    letter-spacing: 0.4em;
     text-transform: uppercase;
 }
 
@@ -56,8 +61,13 @@ html {
     padding: 6em;
 }
 
-.container h1 {
-    font-size: 4.5em;
+.container p {
+    font-size: 1.9em;
+}
+
+.container p:first-letter {
+    color: black;
+    font-size: xx-large;
 }
 
 .container h2 {
@@ -96,15 +106,15 @@ html {
 }
 
 .container .pa {
-    background-image: url("./images/paris.jpg");
+    background-image: url("./images/spray.jpg");
 }
 
 .container .ist {
-    background-image: url("./images/istanbul.jpg");
+    background-image: url("./images/taepper.jpg");
 }
 
 .container .fir {
-    background-image: url("./images/firenze.jpg");
+    background-image: url("./images/farver.jpg");
 }
 
 .container .parallax {

@@ -35,9 +35,32 @@ function aktiverMultimedier() {
     }
 }
 
+function gaaFremad() {
+    if (billedIndeks < billedliste.length - 1) {
+        billedIndeks++;
+    } else {
+        billedIndeks = 0;
+    }
+
+    document.getElementById("slidebillede").src = billedliste[billedIndeks];
+}
+
+function gaaTilbage() {
+    if (billedIndeks > 0) {
+        billedIndeks--;
+    } else {
+        billedIndeks = billedliste.lenght - 1; /* hvis der skal tilføjes flere billeder end de 3, så ændre dette styk, til billedIndex = billedliste.length-1; */
+    }
+
+    document.getElementById("slidebillede").src = billedliste[billedIndeks];
+}
+
+
 <<
 <<
-<< < HEAD
+<<
+<
+HEAD
 const AVIdListe = ["spray", "taepper", "farver", "video"]; ===
 ===
 =
@@ -60,3 +83,17 @@ AVIndholdsliste[0] = new Audio("Bouncy_Fun_1.mp3");
 AVIndholdsliste[1] = new Audio("Walker.mp3");
 AVIndholdsliste[2] = new Audio("Funky_Groove.mp3");
 AVIndholdsliste[3] = document.getElementById("video");
+
+
+/*slideshow*/
+
+const billedliste = ["spray-daaser.png", "trae-vaeg.png", "vaeg.png", "beckers.png"];
+let billedIndeks = 0;
+
+document.getElementById("frem").addEventListener("click", function () {
+    gaaFremad();
+})
+
+document.getElementById("tilbage").addEventListener("click", function () {
+    gaaTilbage();
+})

@@ -470,6 +470,21 @@ h2 {
     cursor: pointer;
 }
 
+*,
+:after,
+:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.slideshow {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
 @media all and (max-width: 599px){
 
     #tekst1{

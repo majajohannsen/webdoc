@@ -12,7 +12,7 @@ html {
     overflow-x: hidden;
 }
 
-.sidenav {
+.navigation {
     height: 100%;
     width: 100px;
     position: fixed;
@@ -25,7 +25,7 @@ html {
     padding-top: 20%;
 }
 
-.sidenav a {
+.navigation a {
     padding: 6px 6px 6px 2px;
     text-decoration: none;
     font-size: 15px;
@@ -384,10 +384,6 @@ html {
     text-transform: uppercase;
 }
 
-.container .title {
-    padding: 6em;
-}
-
 .container h1 {
     font-size: 1.6em;
 }
@@ -417,8 +413,10 @@ h2 {
 .between {
     height: 60em;
     position: relative;
-
+    display: flex;
+    width: 100%;
 }
+
 
 .box {
     width: 100%;
@@ -470,4 +468,16 @@ h2 {
     font-size: 20px;
     font-weight: bold;
     cursor: pointer;
+}
+
+@media all and (max-width: 599px){
+
+    #tekst1{
+    height: 60em;
+    }
+
+    .between{
+        height: 100em;
+    }
+
 }

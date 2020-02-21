@@ -12,6 +12,8 @@ function erSynlig(elementId) {
     }
 }
 
+
+//--------Tekst Animation-------
 function aktiverTekstAnimation() {
     for (let i = 0; i <= tekstIdListe.length - 1; i++) {
         if (erSynlig(tekstIdListe[i])) {
@@ -21,6 +23,8 @@ function aktiverTekstAnimation() {
         }
     }
 }
+
+//------Videoer--------
 
 function aktiverMultimedier() {
 
@@ -35,6 +39,8 @@ function aktiverMultimedier() {
     }
 }
 
+
+//----------Slideshow--------------
 function gaaFremad() {
     if (billedIndeks < billedliste.length - 1) {
         billedIndeks++;
@@ -62,10 +68,10 @@ const tekstIdListe = ["tekst1", "tekst2", "tekst3", "tekst4"];
 
 
 // -------- MOAB ---------
-/* window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function () {
     aktiverTekstAnimation();
     aktiverMultimedier();
-}); */
+});
 
 const AVIdListe = ["spray", "taepper", "farver", "video"];
 const AVIndholdsliste = [];

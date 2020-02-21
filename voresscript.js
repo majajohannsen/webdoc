@@ -78,7 +78,7 @@ AVIndholdsliste[3] = document.getElementById("video");
 
 /*slideshow*/
 
-const billedliste = ["images/spray-daaser.png", "images/trae-vaeg.png", "images/vaeg.png", "images/beckers.png"];
+const billedliste = ["images/spray-daaser.jpg", "images/trae-vaeg.jpg", "images/vaeg.jpg", "images/beckers.jpg"];
 let billedIndeks = 0;
 
 document.getElementById("frem").addEventListener("click", function () {

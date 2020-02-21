@@ -49,34 +49,25 @@ function gaaTilbage() {
     if (billedIndeks > 0) {
         billedIndeks--;
     } else {
-        billedIndeks = billedliste.lenght - 1; /* hvis der skal tilføjes flere billeder end de 3, så ændre dette styk, til billedIndex = billedliste.length-1; */
+        billedIndeks = billedliste.length - 1; /* hvis der skal tilføjes flere billeder end de 3, så ændre dette styk, til billedIndex = billedliste.length-1; */
     }
 
     document.getElementById("slidebillede").src = billedliste[billedIndeks];
 }
 
 
-<<
-<<
-<<
-<
-HEAD
-const AVIdListe = ["spray", "taepper", "farver", "video"]; ===
-===
-=
 //Hovedeprogrammet
 
 const tekstIdListe = ["tekst1", "tekst2", "tekst3", "tekst4"];
 
-window.addEventListener("scroll", function () {
+
+// -------- MOAB ---------
+/* window.addEventListener("scroll", function () {
     aktiverTekstAnimation();
     aktiverMultimedier();
-});
+}); */
 
-const AVIdListe = ["spray", "taepper", "farver", "video"]; >>>
->>>
->
-webdoc / master
+const AVIdListe = ["spray", "taepper", "farver", "video"];
 const AVIndholdsliste = [];
 
 AVIndholdsliste[0] = new Audio("Bouncy_Fun_1.mp3");
@@ -87,7 +78,7 @@ AVIndholdsliste[3] = document.getElementById("video");
 
 /*slideshow*/
 
-const billedliste = ["spray-daaser.png", "trae-vaeg.png", "vaeg.png", "beckers.png"];
+const billedliste = ["images/spray-daaser.png", "images/trae-vaeg.png", "images/vaeg.png", "images/beckers.png"];
 let billedIndeks = 0;
 
 document.getElementById("frem").addEventListener("click", function () {

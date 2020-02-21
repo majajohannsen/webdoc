@@ -1,7 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
+*,
+:after,
+:before {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 html {
@@ -10,38 +12,6 @@ html {
     font-family: 'Roboto', sans-serif;
     scroll-behavior: smooth;
     overflow-x: hidden;
-}
-
-.navigation {
-    height: 100%;
-    width: 100px;
-    position: fixed;
-    right: 0;
-    z-index: 1;
-    top: 0;
-    opacity: 70%;
-    background-color: seagreen;
-    overflow-x: hidden;
-    padding-top: 20%;
-}
-
-.navigation a {
-    padding: 6px 6px 6px 2px;
-    text-decoration: none;
-    font-size: 15px;
-    color: #fff;
-    display: block;
-    text-align: center;
-}
-
-#h1nav {
-    color: white;
-    font-size: 18px;
-    text-align: center;
-}
-
-.sidenav a:hover {
-    color: #f1f1f1;
 }
 
 
@@ -380,7 +350,8 @@ html {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    letter-spacing: 0.8em;
+    letter-spacing: 0.2em;
+    line-height: 4em;
     text-transform: uppercase;
 }
 
@@ -388,10 +359,14 @@ html {
     font-size: 1.6em;
 }
 
-.container h1:first-letter {
+#h1-overskrift {
+    font-size: 50px;
+    margin-top: 20px;
+}
 
-    color: black;
-    font-size: xx-large;
+.container h1:first-letter {
+    color: gray;
+    font-size: 70px;
 }
 
 .container {
@@ -406,17 +381,17 @@ h2 {
 .container h3 {
     font-size: 1.4em;
     line-height: 0;
-    padding: 1em 0;
+    padding: 1.5em 0;
+    margin-bottom: 20px;
 }
 
 
 .between {
-    height: 60em;
+    height: 800px;
     position: relative;
     display: flex;
     width: 100%;
 }
-
 
 .box {
     width: 100%;
@@ -470,29 +445,8 @@ h2 {
     cursor: pointer;
 }
 
-*,
-:after,
-:before {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
 
 .slideshow {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-
-@media all and (max-width: 599px){
-
-    #tekst1{
-    height: 60em;
-    }
-
-    .between{
-        height: 100em;
-    }
-
+    margin: 0 auto;
+    width: 800px;
 }

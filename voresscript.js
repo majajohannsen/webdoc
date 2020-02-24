@@ -126,6 +126,8 @@ function gaaTilbage() {
     document.getElementById("slidebillede").src = billedliste[billedIndeks];
 }
 
+//arabisk musik
+
 
 //Hovedeprogrammet
 const tekstIdListe = ["tekst1", "tekst2", "tekst3", "tekst4"];
@@ -136,7 +138,7 @@ const AVIndholdsliste = [];
 //TODO
 //AVIndholdsliste[0] = new Audio("Bouncy_Fun_1.mp3");
 //AVIndholdsliste[1] = new Audio("Walker.mp3");
-//AVIndholdsliste[2] = new Audio("Funky_Groove.mp3");
+//AVIndholdsliste[2] = new Audio("audio/arabisk_musik.mp2");
 AVIndholdsliste[0] = document.getElementById("video");
 
 

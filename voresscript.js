@@ -8,7 +8,7 @@
 
 //used to configure how far away the video shoud play, could be made dynamic to adjust with viewport height
 var hasClicked = false;
-var videoPlayDistance = 410;
+var videoPlayDistance = 400;
 
 //all video elements in array
 var videos = document.getElementsByTagName("video");
@@ -27,7 +27,7 @@ function getVideoDistanceFromViewport(index) {
     //gets height of viewport
     var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     //gets the middle position of video and finds how far it is from the middle of the viewport
-    return Math.abs(((videoBoundingClientRects[0].top + videoBoundingClientRects[0].bottom) / 2) - viewPortHeight / 2);
+    return Math.abs(((videoBoundingClientRects[index].top + videoBoundingClientRects[index].bottom) / 2) - viewPortHeight / 2);
 }
 
 //returns video object and distance
@@ -142,7 +142,7 @@ AVIndholdsliste[0] = document.getElementById("video");
 
 /*slideshow*/
 
-const billedliste = ["images/farve-palette.jpg", "images/kurve.jpg", "images/trae.jpg", "images/malingbotter.jpg", "images/pallet.jpg", "images/spray.jpg", "images/teapper.jpg", "images/tree.jpg"];
+const billedliste = ["images/farve-palette.jpg", "images/kurve.jpg", "images/trae.jpg", "images/malingbotter.jpg", "images/farveplader.jpeg", "images/bil.jpg", "images/teapper.jpg", "images/tree.jpg"];
 let billedIndeks = 0;
 
 //Event listeners

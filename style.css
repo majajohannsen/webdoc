@@ -427,7 +427,7 @@ h4 {
 }
 
 .between-pil-op {
-    height: 80px;
+    height: 150px;
     position: relative;
     display: flex;
     padding-right: 20%;
@@ -527,4 +527,13 @@ h4 {
     width: 40px;
     height: 40px;
     margin-right: 30px;
+}
+
+.footer {
+    background-color: antiquewhite;
+    height: 200px;
+    position: relative;
+    display: flex;
+    padding-right: 20%;
+}
 }

@@ -7,7 +7,8 @@
 //
 
 //used to configure how far away the video shoud play, could be made dynamic to adjust with viewport height
-var videoPlayDistance = 500;
+var hasClicked = false;
+var videoPlayDistance = 410;
 
 //all video elements in array
 var videos = document.getElementsByTagName("video");
@@ -26,7 +27,7 @@ function getVideoDistanceFromViewport(index) {
     //gets height of viewport
     var viewPortHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     //gets the middle position of video and finds how far it is from the middle of the viewport
-    return Math.abs((videoBoundingClientRects[index].bottom + videoBoundingClientRects[index].top) / 2) - (viewPortHeight / 2);
+    return Math.abs(((videoBoundingClientRects[0].top + videoBoundingClientRects[0].bottom) / 2) - viewPortHeight / 2);
 }
 
 //returns video object and distance
@@ -51,12 +52,14 @@ function stopAllVideos() {
 }
 
 function isVideoVisible() {
-    var closest = getClosestVideo();
-    if (closest[1] < videoPlayDistance) {
-        closest[0].loop = true;
-        closest[0].play();
-    } else {
-        stopAllVideos();
+    if (hasClicked) {
+        var closest = getClosestVideo();
+        if (closest[1] <= videoPlayDistance) {
+            closest[0].loop = true;
+            closest[0].play();
+        } else {
+            stopAllVideos();
+        }
     }
 }
 
@@ -155,5 +158,10 @@ document.getElementById("tilbage").addEventListener("click", function () {
 window.addEventListener("scroll", function () {
     //aktiverTekstAnimation();
     //aktiverMultimedier();
+    isVideoVisible();
+});
+
+window.addEventListener("click", function () {
+    hasClicked = true;
     isVideoVisible();
 });

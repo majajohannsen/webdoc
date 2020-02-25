@@ -114,7 +114,7 @@ function gaaTilbage() {
 
 //Hovedeprogrammet
 
-
+var audio = new Audio('audio/arabisk_musik.mp3');
 
 //-------slideshow-------
 
@@ -132,14 +132,16 @@ document.getElementById("tilbage").addEventListener("click", function () {
 
 // -------- MOAB ---------
 window.addEventListener("scroll", function () {
-    //aktiverTekstAnimation();
-    //aktiverMultimedier();
+    let kultur = erSynlig("kultur")
+    if (kultur) {
+        audio.play();
+    } else {
+        audio.pause()
+    }
     isVideoVisible();
 });
 
 window.addEventListener("click", function () {
     hasClicked = true;
     isVideoVisible();
-    var audio = new Audio('audio/arabisk_musik.mp2');
-    audio.play();
 });

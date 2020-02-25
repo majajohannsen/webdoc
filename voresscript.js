@@ -1,10 +1,7 @@
 "use strict";
 
-//
-//
-//code joe has added
-//
-//
+
+// ------Video-------
 
 //used to configure how far away the video shoud play, could be made dynamic to adjust with viewport height
 var hasClicked = false;
@@ -62,11 +59,10 @@ function isVideoVisible() {
         }
     }
 }
-
-//end of joes code
-
+//------Video SLUT-----------
 
 
+//------
 function erSynlig(elementId) {
     const elementBoks = document.getElementById(elementId).getBoundingClientRect();
     const halvtredsPct = elementBoks.height * 0.5;
@@ -76,18 +72,6 @@ function erSynlig(elementId) {
         return true;
     } else {
         return false;
-    }
-}
-
-
-//--------Tekst Animation-------
-function aktiverTekstAnimation() {
-    for (let i = 0; i <= tekstIdListe.length - 1; i++) {
-        if (erSynlig(tekstIdListe[i])) {
-            document.getElementById(tekstIdListe[i]).classList.add("roll-in-right");
-        } else {
-            document.getElementById(tekstIdListe[i]).classList.remove("roll-in-right")
-        }
     }
 }
 
@@ -126,23 +110,13 @@ function gaaTilbage() {
     document.getElementById("slidebillede").src = billedliste[billedIndeks];
 }
 
-//arabisk musik
 
 
 //Hovedeprogrammet
-const tekstIdListe = ["tekst1", "tekst2", "tekst3", "tekst4"];
-
-const AVIdListe = ["spray", "taepper", "farver", "video"];
-const AVIndholdsliste = [];
-
-//TODO
-//AVIndholdsliste[0] = new Audio("Bouncy_Fun_1.mp3");
-//AVIndholdsliste[1] = new Audio("Walker.mp3");
-//AVIndholdsliste[2] = new Audio("audio/arabisk_musik.mp2");
-AVIndholdsliste[0] = document.getElementById("video");
 
 
-/*slideshow*/
+
+//-------slideshow-------
 
 const billedliste = ["images/farve-palette.jpg", "images/kurve.jpg", "images/trae.jpg", "images/malingbotter.jpg", "images/farveplader.jpeg", "images/bil.jpg", "images/teapper.jpg", "images/tree.jpg"];
 let billedIndeks = 0;
@@ -166,4 +140,6 @@ window.addEventListener("scroll", function () {
 window.addEventListener("click", function () {
     hasClicked = true;
     isVideoVisible();
+    var audio = new Audio('audio/arabisk_musik.mp2');
+    audio.play();
 });
